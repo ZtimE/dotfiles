@@ -51,5 +51,6 @@ set number
 syntax on
 colorscheme solarized
 " ===== Airline settings ====
+set ttimeoutlen=50
 set laststatus=2
 let g:airline_powerline_fonts=1
