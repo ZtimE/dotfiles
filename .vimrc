@@ -14,7 +14,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,10 +51,5 @@ set number
 syntax on
 colorscheme solarized
 " ===== Airline settings ====
- let g:airline_left_sep = ''
- let g:airline_left_alt_sep = ''
- let g:airline_right_sep = ''
- let g:airline_right_alt_sep = ''
- let g:airline_symbols.branch = ''
- let g:airline_symbols.readonly = ''
- let g:airline_symbols.linenr = ''
+set laststatus=2
+let g:airline_powerline_fonts=1
