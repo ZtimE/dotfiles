@@ -14,14 +14,15 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
 " ========= Patogen ========
 execute pathogen#infect()
 " ======== Powerline =======
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
-set laststatus=2
+" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+" set laststatus=2
 " ====== vim-surround =====
 source ~/.vim/bundle/vim-surround/plugin/surround.vim
 " ======= snipmate ========
@@ -49,3 +50,11 @@ let g:solarized_termcolors=256
 set number
 syntax on
 colorscheme solarized
+" ===== Airline settings ====
+ let g:airline_left_sep = ''
+ let g:airline_left_alt_sep = ''
+ let g:airline_right_sep = ''
+ let g:airline_right_alt_sep = ''
+ let g:airline_symbols.branch = ''
+ let g:airline_symbols.readonly = ''
+ let g:airline_symbols.linenr = ''
