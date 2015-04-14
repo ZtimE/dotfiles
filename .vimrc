@@ -15,6 +15,10 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 " Plugin 'bling/vim-airline'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -25,8 +29,6 @@ execute pathogen#infect()
 " set laststatus=2
 " ====== vim-surround =====
 source ~/.vim/bundle/vim-surround/plugin/surround.vim
-" ======= snipmate ========
-source ~/.vim/bundle/snipmate/plugin/snipMate.vim
 "========= Ctrl-p =========
 set runtimepath^=~/.vim/bundle/ctrlp.vim 
 "========  php syntax ====
@@ -44,7 +46,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
 	\"mode":"active",
 	\"active_filetypes": ["java","ruby","php","python"],
-	\"passive_filetypes": ["md"] }
+	\"passive_filetypes": ["md", "go"] }
 " ======  md - syntax settings =======
 let g:vim_markdown_folding_disabled=1
 "========  solarized settings =======
