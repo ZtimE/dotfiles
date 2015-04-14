@@ -41,15 +41,21 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+	\"mode":"active",
+	\"active_filetypes": ["java","ruby","php","python"],
+	\"passive_filetypes": ["md"] }
 " ======  md - syntax settings =======
 let g:vim_markdown_folding_disabled=1
 "========  solarized settings =======
-set background=dark
-let g:solarized_termcolors=256
+" set background=dark
+" let g:solarized_termcolors=256
+" ======== molokai settings ========
+" let g:rehash256=1
 " ===== General settings ==== 
 set number
 syntax on
-colorscheme solarized
+colorscheme molokai
 " ===== Airline settings ====
 set ttimeoutlen=50
 set laststatus=2
