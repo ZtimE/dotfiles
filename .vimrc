@@ -55,6 +55,10 @@ let g:vim_markdown_folding_disabled=1
 " ======== molokai settings ========
 " let g:rehash256=1
 " ===== General settings ==== 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 set number
 syntax on
 colorscheme molokai
@@ -62,3 +66,4 @@ colorscheme molokai
 set ttimeoutlen=50
 set laststatus=2
 let g:airline_powerline_fonts=1
+
