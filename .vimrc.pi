@@ -8,6 +8,7 @@ Plugin 'gmarik/Vundle.vim'
 " ======== my plugins ======
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'sickill/vim-monokai'
 call vundle#end()
 filetype plugin indent on
 " ============== vundle done =============
@@ -24,5 +25,6 @@ set t_Co=256
 :highlight LineNr ctermfg=DarkGrey term=bold cterm=NONE ctermbg=DarkGrey
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
+colorscheme monokai
 let g:Powerline_symbols = "fancy"
