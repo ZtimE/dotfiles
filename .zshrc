@@ -48,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin
-
+export PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS #for prolog
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #gopath
 export GOPATH="$HOME/Dropbox/Skola/goWork/"
