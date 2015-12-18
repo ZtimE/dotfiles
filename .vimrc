@@ -38,6 +38,8 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'vale1410/vim-minizinc'
 " moving through text easy
 Plugin 'easymotion/vim-easymotion'
+" Ctrl - p fuzzy finding
+Plugin 'ctrlpvim/ctrlp.vim'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
