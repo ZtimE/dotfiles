@@ -40,6 +40,10 @@ Plugin 'vale1410/vim-minizinc'
 Plugin 'easymotion/vim-easymotion'
 " Ctrl - p fuzzy finding
 Plugin 'ctrlpvim/ctrlp.vim'
+"Nerdtree
+Plugin 'scrooloose/nerdtree'
+"Nerdtree git plugin
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
