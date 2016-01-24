@@ -96,7 +96,7 @@ let g:airline_powerline_fonts=1
 let mapleader=","
 " Insert opening and closing curly bracket
 " nmap <leader><RETURN> a<SPACE>{<RETURN>}<ESC>O
-imap <F3> {<Return><Tab><Return>}<Esc><Up>A
+imap <F3> {<Esc>o<Return>}<Esc><Up>A<Tab>
 " visual up and down movement through wrapped lines/paragraphs
 noremap j gj
 noremap k gk
