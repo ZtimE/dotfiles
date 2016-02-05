@@ -11,9 +11,9 @@ Plugin 'gmarik/Vundle.vim'
 " Context menu
 "Bundle 'mbadran/headlights'
 " Go lang support, auto-compleate and stuff
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 " Code-complete , looking for replacement
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 " Align text in tables
 Plugin 'godlygeek/tabular'
 " Mappings for markdowm
@@ -24,18 +24,14 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'nathanaelkane/vim-indent-guides'
 " Airline-not used
 Plugin 'bling/vim-airline'
-" used by snipmate
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-" adds some stuff other scripts uses,snipmate
-"Plugin 'tomtom/tlib_vim'
-" Provides snippets
-"Plugin 'garbas/vim-snipmate'
-" More snippets 
-"Plugin 'honza/vim-snippets'
-" Records the time you work on projects
+" Ultisnip
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" wakatime
 Plugin 'wakatime/vim-wakatime'
 " Minizink stuff
-Plugin 'vale1410/vim-minizinc'
+"Plugin 'vale1410/vim-minizinc'
 " moving through text easy
 Plugin 'easymotion/vim-easymotion'
 " Ctrl - p fuzzy finding
@@ -64,16 +60,26 @@ set guifont=Inconsolata\ for\ Powerline:h13
 set guioptions-=r
 set guioptions-=L
 " ======== Syntastic settings =========
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-	\"mode":"active",
-	\"active_filetypes": ["java","ruby","php","python"],
-	\"passive_filetypes": ["md", "go"] }
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_mode_map = {
+"	\"mode":"active",
+"	\"active_filetypes": ["java","ruby","php","python"],
+"	\"passive_filetypes": ["md", "go"] }
 " ======  md - syntax settings =======
 let g:vim_markdown_folding_disabled=1
+" ======  Ultisnip configuration =======
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 "========  solarized settings =======
 " set background=dark
 " let g:solarized_termcolors=256
@@ -96,7 +102,7 @@ let g:airline_powerline_fonts=1
 let mapleader=","
 " Insert opening and closing curly bracket
 " nmap <leader><RETURN> a<SPACE>{<RETURN>}<ESC>O
-imap <F3> {<Esc>o<Return>}<Esc><Up>A<Tab>
+" imap <F3> {<Esc>o<Return>}<Esc><Up>A<Tab>
 " visual up and down movement through wrapped lines/paragraphs
 noremap j gj
 noremap k gk
