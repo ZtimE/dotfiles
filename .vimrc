@@ -40,6 +40,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 "Nerdtree git plugin
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Swift syntax highlightning
+Plugin 'keith/swift.vim'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
