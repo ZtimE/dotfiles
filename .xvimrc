@@ -1,6 +1,7 @@
 i kk <Esc>
 set incsearch
 
+set relativenumber
 " Case-insensitive searching.
 set ignorecase
 "
@@ -13,5 +14,3 @@ set gdefault
 " " Use the system pasteboard
  set pasteboard
 
-" Set fuzzy search
-nnoremap <c-p> :xccmd openQuickly<CR>
