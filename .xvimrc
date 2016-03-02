@@ -12,3 +12,6 @@ set gdefault
 "
 " " Use the system pasteboard
  set pasteboard
+
+" Set fuzzy search
+nnoremap <c-p> :xccmd openQuickly<CR>
