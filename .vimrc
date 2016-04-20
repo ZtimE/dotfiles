@@ -27,7 +27,8 @@ Plugin 'bling/vim-airline'
 " Ultisnip
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-
+"rust
+Plugin 'rust-lang/rust.vim'
 " wakatime
 Plugin 'wakatime/vim-wakatime'
 " Minizink stuff
