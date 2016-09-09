@@ -15,11 +15,11 @@ Plugin 'gmarik/Vundle.vim'
 " Code-complete , looking for replacement
 "Plugin 'Valloric/YouCompleteMe'
 " Align text in tables
-Plugin 'godlygeek/tabular'
+" Plugin 'godlygeek/tabular'
 " Mappings for markdowm
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'plasticboy/vim-markdown'
 " Theme
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 " Highlights indention
 Plugin 'nathanaelkane/vim-indent-guides'
 " Airline-not used
@@ -28,11 +28,11 @@ Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 "rust
-Plugin 'rust-lang/rust.vim'
+" Plugin 'rust-lang/rust.vim'
 " wakatime
 Plugin 'wakatime/vim-wakatime'
 " Minizink stuff
-Plugin 'vale1410/vim-minizinc'
+" Plugin 'vale1410/vim-minizinc'
 " moving through text easy
 Plugin 'easymotion/vim-easymotion'
 " Ctrl - p fuzzy finding
@@ -42,16 +42,18 @@ Plugin 'scrooloose/nerdtree'
 "Nerdtree git plugin
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 "Swift syntax highlightning
-Plugin 'keith/swift.vim'
+" Plugin 'keith/swift.vim'
 " Supertab - autocompleate
 Plugin 'ervandew/supertab'
 " Validator
-Plugin 'maralla/validator.vim'
+"iPlugin 'maralla/validator.vim'
+" Theme
+Plugin 'roosta/srcery'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
 " ========= Patogen ========
-execute pathogen#infect()
+" execute pathogen#infect()
 " ======== Powerline =======
 " source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 " set laststatus=2
@@ -108,7 +110,7 @@ set shiftwidth=4
 set number
 
 syntax on
-colorscheme molokai
+colorscheme srcery
 " ===== Airline settings ====
 set ttimeoutlen=50
 set laststatus=2
