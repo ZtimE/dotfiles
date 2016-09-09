@@ -45,6 +45,8 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'keith/swift.vim'
 " Supertab - autocompleate
 Plugin 'ervandew/supertab'
+" Validator
+Plugin 'maralla/validator.vim'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
