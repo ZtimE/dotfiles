@@ -48,7 +48,10 @@ Plugin 'ervandew/supertab'
 " Validator
 "iPlugin 'maralla/validator.vim'
 " Theme
-Plugin 'roosta/srcery'
+" Plugin 'roosta/srcery'
+Plugin 'Marfisc/vorange'
+"Syntastic
+Plugin 'scrooloose/syntastic'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -69,10 +72,15 @@ set guifont=Inconsolata\ for\ Powerline:h13
 set guioptions-=r
 set guioptions-=L
 " ======== Syntastic settings =========
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 "let g:syntastic_mode_map = {
 "	\"mode":"active",
 "	\"active_filetypes": ["java","ruby","php","python"],
@@ -110,7 +118,8 @@ set shiftwidth=4
 set number
 
 syntax on
-colorscheme srcery
+" ===== Color scheme ====
+colorscheme vorange
 " ===== Airline settings ====
 set ttimeoutlen=50
 set laststatus=2
