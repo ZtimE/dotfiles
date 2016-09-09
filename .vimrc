@@ -32,7 +32,7 @@ Plugin 'rust-lang/rust.vim'
 " wakatime
 Plugin 'wakatime/vim-wakatime'
 " Minizink stuff
-"Plugin 'vale1410/vim-minizinc'
+Plugin 'vale1410/vim-minizinc'
 " moving through text easy
 Plugin 'easymotion/vim-easymotion'
 " Ctrl - p fuzzy finding
@@ -43,6 +43,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 "Swift syntax highlightning
 Plugin 'keith/swift.vim'
+" Supertab - autocompleate
+Plugin 'ervandew/supertab'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -89,11 +91,20 @@ let g:UltiSnipsEditSplit="vertical"
 " ======== molokai settings ========
 " let g:rehash256=1
 " ===== General settings ==== 
+" Old tab settings
+"set tabstop=2
+"set shiftwidth=2
+"set softtabstop=2
+"set expandtab
+" use tab settings
+set autoindent
+set noexpandtab
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
-set expandtab
+
+"numbers
 set number
+
 syntax on
 colorscheme molokai
 " ===== Airline settings ====
@@ -113,3 +124,6 @@ noremap k gk
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 nmap s <Plug>(easymotion-s)
+" spacing
+"autocmd Filetype html set tabstop=2 shiftwidth=2 expandtab
+"autocmd Filetype ruby set tabstop=2 shiftwidth=2 expandtab
