@@ -28,7 +28,7 @@ Plugin 'bling/vim-airline'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 "rust
-" Plugin 'rust-lang/rust.vim'
+Plugin 'rust-lang/rust.vim'
 " wakatime
 Plugin 'wakatime/vim-wakatime'
 " Minizink stuff
@@ -45,16 +45,27 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin 'keith/swift.vim'
 " Supertab - autocompleate
 Plugin 'ervandew/supertab'
+" Autoclose brackets
+Plugin 'Raimondi/delimitMate'
 " Validator
 "iPlugin 'maralla/validator.vim'
 " Theme
 " Plugin 'roosta/srcery'
 Plugin 'Marfisc/vorange'
+" theme 2
+Plugin 'jacoborus/tender'
 "Syntastic
 Plugin 'scrooloose/syntastic'
+" Search tab complete
+Plugin 'vim-scripts/SearchComplete'
+" NERDcommenter
+Plugin 'scrooloose/nerdcommenter'
+" Git fugitive
+Plugin 'tpope/vim-fugitive'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
+filetype plugin on
 " ========= Patogen ========
 " execute pathogen#infect()
 " ======== Powerline =======
@@ -64,6 +75,9 @@ filetype plugin indent on    " required
 " source ~/.vim/bundle/vim-surround/plugin/surround.vim
 "========= Ctrl-p =========
 set runtimepath^=~/.vim/bundle/ctrlp.vim 
+"========= delimitMate =========
+let delimitMate_expand_cr=1
+let delimitMate_jump_expansion = 1
 "========  php syntax ====
 " source ~/.vim/bundle/php.vim/syntax/php.vim
 " ======== gui settings for mvim ==========
@@ -77,9 +91,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_cpp_complier_options = "-std=c++11"
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
 
 "let g:syntastic_mode_map = {
 "	\"mode":"active",
@@ -90,9 +108,9 @@ let g:vim_markdown_folding_disabled=1
 " ======  Ultisnip configuration =======
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<leader><tab>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsListSnippets="<c-b>"
 " If you want :UltiSnipsEdit to split your window.
@@ -119,11 +137,14 @@ set number
 
 syntax on
 " ===== Color scheme ====
-colorscheme vorange
+colorscheme tender
+let g:tender_airline = 1
+let g:airline_theme="tender"
 " ===== Airline settings ====
 set ttimeoutlen=50
 set laststatus=2
 let g:airline_powerline_fonts=1
+let g:airline#extensions#branch#enabled = 1
 " ==== Mappings ====
 " Map leader
 let mapleader=","
