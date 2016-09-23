@@ -43,7 +43,9 @@ alias termconfig="st ~/.zshrc"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git vagrant sublime vagrant terminalapp)
 # for powerline
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+# source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+# for that keyboard binding
+source ~/.profile
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
