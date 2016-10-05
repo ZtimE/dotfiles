@@ -19,7 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 " Mappings for markdowm
 " Plugin 'plasticboy/vim-markdown'
 " Theme
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 " Highlights indention
 Plugin 'nathanaelkane/vim-indent-guides'
 " Airline-not used
@@ -51,9 +51,10 @@ Plugin 'Raimondi/delimitMate'
 "iPlugin 'maralla/validator.vim'
 " Theme
 " Plugin 'roosta/srcery'
-Plugin 'Marfisc/vorange'
+" Plugin 'Marfisc/vorange'
 " theme 2
-Plugin 'jacoborus/tender'
+" Plugin 'jacoborus/tender'
+Plugin 'crusoexia/vim-monokai'
 "Syntastic
 Plugin 'scrooloose/syntastic'
 " Search tab complete
@@ -116,8 +117,8 @@ let g:UltiSnipsListSnippets="<leader-b>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 "========  solarized settings =======
-" set background=dark
-" let g:solarized_termcolors=256
+set background=dark
+let g:solarized_termcolors=256
 " ======== molokai settings ========
 " let g:rehash256=1
 " ===== General settings ==== 
@@ -137,9 +138,11 @@ set number
 
 syntax on
 " ===== Color scheme ====
-colorscheme tender
-let g:tender_airline = 1
-let g:airline_theme="tender"
+colorscheme solarized
+"set background=dark
+"colorscheme tender
+"let g:tender_airline = 1
+"let g:airline_theme="tender"
 " ===== Airline settings ====
 set ttimeoutlen=50
 set laststatus=2
