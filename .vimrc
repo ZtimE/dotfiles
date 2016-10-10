@@ -22,8 +22,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 " Highlights indention
 Plugin 'nathanaelkane/vim-indent-guides'
-" Airline-not used
-Plugin 'bling/vim-airline'
+" Airline
+Plugin 'vim-airline/vim-airline'
 " Ultisnip
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -154,6 +154,8 @@ let mapleader=","
 " Insert opening and closing curly bracket
 " nmap <leader><RETURN> a<SPACE>{<RETURN>}<ESC>O
 " imap <F3> {<Esc>o<Return>}<Esc><Up>A<Tab>
+" Map Nerdtree
+map <F5> :NERDTreeToggle<RETURN>
 " visual up and down movement through wrapped lines/paragraphs
 noremap j gj
 noremap k gk
