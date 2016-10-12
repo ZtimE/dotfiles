@@ -63,6 +63,10 @@ Plugin 'vim-scripts/SearchComplete'
 Plugin 'scrooloose/nerdcommenter'
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
+"Fix colors in terminal
+Plugin 'godlygeek/csapprox'
+" More c++ syntax
+Plugin 'octol/vim-cpp-enhanced-highlight'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -117,8 +121,8 @@ let g:UltiSnipsListSnippets="<leader-b>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 "========  solarized settings =======
-set background=dark
-let g:solarized_termcolors=256
+"set background=dark
+"let g:solarized_termcolors=256
 " ======== molokai settings ========
 " let g:rehash256=1
 " ===== General settings ==== 
@@ -138,7 +142,7 @@ set number
 
 syntax on
 " ===== Color scheme ====
-colorscheme solarized
+colorscheme monokai
 "set background=dark
 "colorscheme tender
 "let g:tender_airline = 1
