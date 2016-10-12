@@ -19,11 +19,11 @@ Plugin 'gmarik/Vundle.vim'
 " Mappings for markdowm
 " Plugin 'plasticboy/vim-markdown'
 " Theme
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 " Highlights indention
 Plugin 'nathanaelkane/vim-indent-guides'
-" Airline-not used
-Plugin 'bling/vim-airline'
+" Airline
+Plugin 'vim-airline/vim-airline'
 " Ultisnip
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -51,9 +51,10 @@ Plugin 'Raimondi/delimitMate'
 "iPlugin 'maralla/validator.vim'
 " Theme
 " Plugin 'roosta/srcery'
-Plugin 'Marfisc/vorange'
+" Plugin 'Marfisc/vorange'
 " theme 2
-Plugin 'jacoborus/tender'
+" Plugin 'jacoborus/tender'
+Plugin 'crusoexia/vim-monokai'
 "Syntastic
 Plugin 'scrooloose/syntastic'
 " Search tab complete
@@ -62,6 +63,10 @@ Plugin 'vim-scripts/SearchComplete'
 Plugin 'scrooloose/nerdcommenter'
 " Git fugitive
 Plugin 'tpope/vim-fugitive'
+"Fix colors in terminal
+Plugin 'godlygeek/csapprox'
+" More c++ syntax
+Plugin 'octol/vim-cpp-enhanced-highlight'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -116,8 +121,8 @@ let g:UltiSnipsListSnippets="<leader-b>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 "========  solarized settings =======
-" set background=dark
-" let g:solarized_termcolors=256
+"set background=dark
+"let g:solarized_termcolors=256
 " ======== molokai settings ========
 " let g:rehash256=1
 " ===== General settings ==== 
@@ -137,9 +142,11 @@ set number
 
 syntax on
 " ===== Color scheme ====
-colorscheme tender
-let g:tender_airline = 1
-let g:airline_theme="tender"
+colorscheme monokai
+"set background=dark
+"colorscheme tender
+"let g:tender_airline = 1
+"let g:airline_theme="tender"
 " ===== Airline settings ====
 set ttimeoutlen=50
 set laststatus=2
@@ -151,6 +158,8 @@ let mapleader=","
 " Insert opening and closing curly bracket
 " nmap <leader><RETURN> a<SPACE>{<RETURN>}<ESC>O
 " imap <F3> {<Esc>o<Return>}<Esc><Up>A<Tab>
+" Map Nerdtree
+map <F5> :NERDTreeToggle<RETURN>
 " visual up and down movement through wrapped lines/paragraphs
 noremap j gj
 noremap k gk
