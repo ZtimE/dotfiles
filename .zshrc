@@ -12,6 +12,9 @@ ZSH_THEME="agnoster"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias termconfig="st ~/.zshrc"
 
+# Vim tab alias
+alias vimtc="vim -p *.h *.cpp *.hpp makefile"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
