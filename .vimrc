@@ -45,6 +45,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/csapprox'
 " More c++ syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'
+" Vim restore sessions with tmux
+Plugin 'tpope/vim-obsession'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -120,6 +122,8 @@ noremap k gk
 " Repmap for easy motion
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
+
+nmap <leader>o :Obsession<return>
 nmap s <Plug>(easymotion-s)
 " testing for make
 nmap <leader>m :! make all -B<return><return>
