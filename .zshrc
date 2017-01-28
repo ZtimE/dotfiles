@@ -75,3 +75,4 @@ export LC_TIME=sv_SE.UTF-8
 export LC_ALL=
 # remove username and machine from terminal by using my regular username
 DEFAULT_USER=jonaswedin
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -82,7 +82,7 @@ let g:UltiSnipsExpandTrigger="<leader><tab>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsListSnippets="<leader-b>"
+" let g:UltiSnipsListSnippets="<leader><space>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 " ===== NERDTree settings=== 
@@ -121,6 +121,14 @@ noremap k gk
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 nmap s <Plug>(easymotion-s)
+" testing for make
+nmap <leader>m :! make all -B<return><return>
+" ===== Tab stuff ==== "
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+" === Set directory for swp
+:set directory=~/.vim/swapfiles//
+" === tab function
 set tabline=%!MyTabLine()  " custom tab pages line
 function MyTabLine()
         let s = '' " complete tabline goes here
