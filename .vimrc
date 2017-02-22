@@ -8,8 +8,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 " ========== My plugins ============
-" Highlights indention
-Plugin 'nathanaelkane/vim-indent-guides'
 " Airline
 Plugin 'vim-airline/vim-airline'
 " Ultisnip
@@ -18,7 +16,7 @@ Plugin 'honza/vim-snippets'
 "rust
 Plugin 'rust-lang/rust.vim'
 " wakatime
-Plugin 'wakatime/vim-wakatime'
+"Plugin 'wakatime/vim-wakatime'
 " moving through text easy
 Plugin 'easymotion/vim-easymotion'
 " Ctrl - p fuzzy finding
@@ -30,7 +28,8 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Compleation
 Plugin 'ervandew/supertab'
 " Autoclose brackets
-Plugin 'Raimondi/delimitMate'
+"Plugin 'Raimondi/delimitMate'
+Plugin 'jiangmiao/auto-pairs'
 " Colors
 Plugin 'crusoexia/vim-monokai'
 "Syntastic
@@ -47,6 +46,10 @@ Plugin 'godlygeek/csapprox'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 " Vim restore sessions with tmux
 Plugin 'tpope/vim-obsession'
+" Type-script syntax highlight
+Plugin 'leafgarland/typescript-vim'
+" Set indent to the same as file is
+Plugin 'ciaranm/detectindent'
 " =================================
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -106,6 +109,12 @@ set shiftwidth=4
 set number
 set relativenumber
 syntax on
+"Reset backspace to work like ''normal''
+set backspace=indent,eol,start
+" vim reads a file when i changes
+set autoread
+" Automaticly detect indent when loading a file
+autocmd BufReadPost * :DetectIndent 
 " ===== Color scheme ====
 colorscheme monokai
 " ===== Airline settings ====

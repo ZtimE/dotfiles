@@ -14,6 +14,7 @@ alias termconfig="st ~/.zshrc"
 
 # Vim tab alias
 alias vimtc="vim -p *.h *.cpp *.hpp makefile"
+alias vimall="vim -p *"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -48,7 +49,7 @@ plugins=(git vagrant sublime vagrant terminalapp brew)
 # for powerline
 # source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 # for that keyboard binding
-source ~/.profile
+#source ~/.profile
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -78,3 +79,9 @@ export LC_ALL=
 # remove username and machine from terminal by using my regular username
 DEFAULT_USER=jonaswedin
 export PATH="$HOME/.cargo/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+# android studio for react
+export ANDROID_HOME=${HOME}/Library/Android/sdk 
+export PATH=${PATH}:${ANDROID_HOME}/tools 
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
