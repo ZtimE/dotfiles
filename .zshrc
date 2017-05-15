@@ -16,7 +16,7 @@ alias termconfig="st ~/.zshrc"
 alias vimtc="vim -p *.h *.cpp *.hpp makefile"
 alias vimall="vim -p *"
 alias vim="nvim"
-alias v="nvim"
+alias v="nvim -p"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
