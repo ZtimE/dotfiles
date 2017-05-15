@@ -18,6 +18,10 @@ set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 
+"Movement
+noremap j gj
+noremap k gk
+
 " leader
 let mapleader=","
 
@@ -31,8 +35,10 @@ Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
 call plug#end()
-
+		
 "Color scheme
 colorscheme monokai
 
@@ -54,3 +60,5 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
 
+"Nerdtree
+map <f5> :NERDTreeToggle<RETURN>

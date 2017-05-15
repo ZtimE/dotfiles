@@ -15,6 +15,8 @@ alias termconfig="st ~/.zshrc"
 # Vim tab alias
 alias vimtc="vim -p *.h *.cpp *.hpp makefile"
 alias vimall="vim -p *"
+alias vim="nvim"
+alias v="nvim"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -54,10 +56,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin
-export PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS #for prolog
+#export PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS #for prolog
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #gopath
-export GOPATH="$HOME/Dropbox/Skola/goWork/"
+#export GOPATH="$HOME/Dropbox/Skola/goWork/"
 #fix for powerline
 unset LANG
 unset LC_COLLATE
