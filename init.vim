@@ -49,6 +49,9 @@ colorscheme monokai
 let g:UltiSnipsExpandTrigger="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
 
+"Indent guides
+let g:indent_guides_enable_on_vim_startup = 1
+
 "Run neomake when saving a file
 autocmd! BufWritePost * Neomake
 
