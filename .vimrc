@@ -29,6 +29,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ervandew/supertab'
 " Autoclose brackets
 "Plugin 'Raimondi/delimitMate'
+"Disable temporarily to enable swedish letters again
 Plugin 'jiangmiao/auto-pairs'
 " Colors
 Plugin 'crusoexia/vim-monokai'
@@ -74,6 +75,9 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_cpp_complier_options = "-std=c++11"
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["html", "tex"] }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -136,6 +140,9 @@ nmap <leader>o :Obsession<return>
 nmap s <Plug>(easymotion-s)
 " testing for make
 nmap <leader>m :! make all -B<return><return>
+
+nmap <leader>s :setlocal spell spelllang=en_gb<return>
+
 " ===== Tab stuff ==== "
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
