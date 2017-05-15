@@ -62,3 +62,7 @@ let g:airline#extensions#tabline#enabled=1
 
 "Nerdtree
 map <f5> :NERDTreeToggle<RETURN>
+
+"Copy/paste to clipboard
+vnoremap <C-c> "+y
+noremap <C-v> "+p
