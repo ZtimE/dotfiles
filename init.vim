@@ -37,6 +37,9 @@ Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 		
 "Color scheme
@@ -60,8 +63,9 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
 
-"Nerdtree
+" Own mappings
 map <f5> :NERDTreeToggle<RETURN>
+nmap <leader>s :setlocal spell spelllang=en_gb<return>
 
 "Copy/paste to clipboard
 vnoremap <C-c> "+y
