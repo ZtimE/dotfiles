@@ -17,6 +17,8 @@ alias vimtc="vim -p *.h *.cpp *.hpp makefile"
 alias vimall="vim -p *"
 alias vim="nvim"
 alias v="nvim -p"
+alias g="git"
+
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

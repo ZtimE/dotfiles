@@ -52,11 +52,12 @@ let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
 "Indent guides
 let g:indent_guides_enable_on_vim_startup = 1
 
-"Run neomake when saving a file
-autocmd! BufWritePost * Neomake
+"disable autogroups
+nnoremap <leader>n :autocmd!<cr>
 
 "Display list of errors
-let g:neomake_open_list=2
+let g:neomake_open_list=0
+"let g:neomake_open_list=2
 
 "Autocomplete
 let g:deoplete#enable_at_startup=1
@@ -70,6 +71,13 @@ let g:airline#extensions#tabline#enabled=1
 map <f5> :NERDTreeToggle<RETURN>
 nmap <leader>s :setlocal spell spelllang=en_gb<return>
 
+noremap <leader>n :noh<cr>
+
 "Copy/paste to clipboard
 vnoremap <C-c> "+y
 noremap <C-v> "+p
+
+"Open vimrc in a split
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>G
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
