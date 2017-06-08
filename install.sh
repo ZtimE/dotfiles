@@ -20,15 +20,31 @@ programs=(
 #Install program
 echo "Installing programs..."
 brew install ${programs[@]}
+
+echo "Installing casks..."
+casks=(
+		google-chrome
+		firefox
+		spectacle
+		dropbox
+		karabiner-elements
+		quicksilver
+		iterm2
+		spotify
+		sublime-text
+		dashlane
+)
+
+brew cask install ${casks[@]}
+
 echo "Cleaning up..."
 brew cleanup
 
 echo "Installing oh-my-zsh..."
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Symlinking files..."
 #Running neovim instead
-#echo "/.vimrc ${HOME}/.vimrc"
 ln -s .tmux.conf ${HOME}
 ln -s .zshrc ${HOME}
 #check for neovim config folder
@@ -41,9 +57,23 @@ else
 		echo "Could not find neovim folder"
 fi
 
+if [ -d ${HOME}/.config/karabiner ]; then
+		echo "Symlinking karabiner..."
+		ln -s karabiner.json ${HOME}/.config/karabiner/karabiner.json
+else
+		echo "Could not find karabiner config folder"
+fi
 #Setting up package managers
 #tmux handles itself
 #neovim also handles itsel
 
+############################
+# Stuff that needs manual install
+############################
+# Ovpn
 
+# Running stuff to let plugins install
+tmux
+nvim
 
+#All done!
