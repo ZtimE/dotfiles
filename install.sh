@@ -9,12 +9,12 @@ fi
 echo "Homebrew installed, updating..."
 
 brew update
-
+brew tap neovim/neovim
 #To install
 programs=(
 		git
 		tmux
-		neovim
+		nvim
 )
 
 #Install program

@@ -82,10 +82,10 @@ export LC_TIME=sv_SE.UTF-8
 export LC_ALL=
 # remove username and machine from terminal by using my regular username
 DEFAULT_USER=jonaswedin
-export PATH="$HOME/.cargo/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+#export PATH="$HOME/.cargo/bin:$PATH"
+#export NVM_DIR="$HOME/.nvm"
+#. "/usr/local/opt/nvm/nvm.sh"
 # android studio for react
-export ANDROID_HOME=${HOME}/Library/Android/sdk 
-export PATH=${PATH}:${ANDROID_HOME}/tools 
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+#export ANDROID_HOME=${HOME}/Library/Android/sdk 
+#export PATH=${PATH}:${ANDROID_HOME}/tools 
+#export PATH=${PATH}:${ANDROID_HOME}/platform-tools

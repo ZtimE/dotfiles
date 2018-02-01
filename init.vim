@@ -14,9 +14,12 @@ set number
 set relativenumber
 
 " tab settings
-set tabstop=2
-set softtabstop=0 noexpandtab
+set tabstop=4
+set softtabstop=4 
 set shiftwidth=4
+set textwidth=80
+set smarttab
+set expandtab
 
 "Movement
 noremap j gj
@@ -27,8 +30,8 @@ let mapleader=","
 
 "junegunn/vim-plug as plugin manager
 "Automate install, taken from FAQ
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
@@ -47,6 +50,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'luochen1990/indent-detector.vim'
 call plug#end()
 		
 "Color scheme
