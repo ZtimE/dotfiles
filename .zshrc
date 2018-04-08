@@ -10,7 +10,7 @@ ZSH_THEME="agnoster"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias termconfig="st ~/.zshrc"
+alias termconfig="vim ~/.zshrc"
 
 # Vim tab alias
 alias vimtc="vim -p *.h *.cpp *.hpp makefile"
@@ -18,7 +18,32 @@ alias vimall="vim -p *"
 alias vim="nvim"
 alias v="nvim -p"
 alias g="git"
+alias gs="git status -sb"
 
+#grep alias
+grepsource () {grep -nR $* .}
+grepsourcei () {grep -inR $* .}
+
+#to remind myself of my smart aliases
+#myalias () {$HOME/dotfiles/aliashelp.sh}
+myalias () {
+echo " ____A_L_I_A_S_E_S__________________________"
+echo "|"
+echo "|   termconfig: Open vim with zshrc"
+echo "|"
+echo "|   vimtc: open h,cpp,hpp and makefiles"
+echo "|          in tabs"
+echo "|   vimall: open all files in tabs" 
+echo "|"
+echo "|   g: git"
+echo "|   gs: pretty git status"
+echo "|"
+echo "|   grepsource: greps the current directory"
+echo "|               for the expression after"
+echo "|   grepsourcei: same as above but not"
+echo "|                case sensative"
+echo "|___________________________________________"
+}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -39,7 +64,7 @@ alias g="git"
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -49,12 +74,12 @@ alias g="git"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vagrant sublime vagrant terminalapp brew)
-# for powerline
-# source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-# for that keyboard binding
-#source ~/.profile
+plugins=(git vagrant sublime vagrant terminalapp brew zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+#Highlights must be after sourcing the plugin
+
+ZSH_HIGHLIGHT_PATTERNS+=('rm *' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor brackets root pattern)
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin
